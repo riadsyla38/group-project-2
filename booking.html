@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Page</title>
+
+    <link rel="stylesheet" href="css/booking.css">
+</head>
+
+<body>
+
+    <div class="bookingContainer">
+
+        <!-- LEFT SIDE -->
+
+        <div class="bookingImage">
+
+            <div class="overlay">
+
+                <h1>Explore The World ✈️</h1>
+
+                <p>
+                    Book unforgettable adventures and discover amazing destinations with comfort and luxury.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+
+        <div class="bookingForm">
+
+            <h1>Book Your Trip</h1>
+
+           <h2 id="selectedPackage">
+                You are booking: Basic Package
+           </h2>
+
+            <p id="totalPrice">
+                Total Price: $299
+            </p>
+
+            <form>
+
+                <!-- PERSONAL INFO -->
+
+                <h3>Personal Information</h3>
+
+                <input type="text" placeholder="Full Name">
+
+                <input type="email" placeholder="Email Address">
+
+                <input type="text" placeholder="Phone Number">
+
+                <input type="text" placeholder="Country">
+
+                <!-- TRAVEL INFO -->
+
+                <h3>Travel Information</h3>
+
+                <select>
+                    <option>Choose Destination</option>
+                    <option>Paris</option>
+                    <option>Tokyo</option>
+                    <option>Dubai</option>
+                    <option>Bali</option>
+                    <option>Switzerland</option>
+                </select>
+
+                <label>Departure Date</label>
+                    <input type="date">
+
+                <label>Return Date</label>
+                    <input type="date">
+
+                <input type="number" placeholder="Number of Travelers">
+
+                <!-- HOTEL -->
+
+                <h3>Hotel Preferences</h3>
+
+                <select>
+                    <option>Room Type</option>
+                    <option>Single Room</option>
+                    <option>Double Room</option>
+                    <option>Luxury Suite</option>
+                </select>
+
+                <!-- ACTIVITIES -->
+
+                <h3>Extra Activities</h3>
+
+                <div class="checkboxes">
+
+                    <label>
+                        <input type="checkbox">
+                        City Tour
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Boat Ride
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Hiking
+                    </label>
+
+                    <label>
+                        <input type="checkbox">
+                        Spa Access
+                    </label>
+
+                </div>
+
+                <!-- REQUESTS -->
+
+                <h3>Special Requests</h3>
+
+                <textarea placeholder="Enter special requests..."></textarea>
+
+                <button type="submit">
+                    Confirm Booking
+                </button>
+
+                <div class="supportBox">
+
+    <h3>Need Support?</h3>
+
+    <p>📞 +383 44 123 456</p>
+
+    <p>✉️ explorextravel@gmail.com</p>
+
+    <textarea
+    placeholder="Send us a message..."></textarea>
+
+    <button type="button" id="supportBtn">
+        Send Message
+    </button>
+
+</div>
+
+<a href="packages.html" id="backBtn">
+    ← Return to Packages
+</a>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="js/booking.js"></script>
+
+</body>
+</html>
