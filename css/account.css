@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+
+    background: linear-gradient(
+        -45deg,
+        #0F172A,
+        #1E3A8A,
+        #2563EB,
+        #1D4ED8
+    );
+
+    background-size: 400% 400%;
+
+    animation: gradientMove 15s ease infinite;
+
+    padding: 40px;
+}
+
+@keyframes gradientMove{
+
+    0%{
+        background-position: 0% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+
+}
+
+/* MAIN CONTAINER */
+
+.accountContainer{
+    width: 100%;
+    max-width: 1500px;
+
+    margin: auto;
+
+    display: flex;
+
+    background: rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    box-shadow: 0px 10px 40px rgba(0,0,0,0.5);
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width: 30%;
+
+    background: rgba(255,255,255,0.05);
+
+    padding: 50px;
+
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#profileImage{
+    width: 180px;
+    height: 180px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.1);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 90px;
+
+    border: 5px solid white;
+
+    margin-bottom: 25px;
+
+    backdrop-filter: blur(10px);
+}
+
+#username{
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.role{
+    color: #CBD5E1;
+    margin-bottom: 30px;
+}
+
+#editProfileBtn{
+    width: 100%;
+
+    padding: 15px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: #38BDF8;
+
+    color: black;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#editProfileBtn:hover{
+    background: white;
+    transform: scale(1.03);
+}
+
+/* STATS */
+
+.stats{
+    width: 100%;
+
+    margin-top: 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.statBox{
+    background: rgba(255,255,255,0.08);
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.statBox:hover{
+    background: rgba(255,255,255,0.14);
+
+    transform: translateY(-3px);
+}
+
+.statBox h2{
+    font-size: 35px;
+    color: #38BDF8;
+}
+
+/* MAIN CONTENT */
+
+.mainContent{
+    width: 70%;
+
+    padding: 50px;
+
+    color: white;
+}
+
+.mainContent h1{
+    margin-bottom: 30px;
+    font-size: 45px;
+}
+
+/* INFO GRID */
+
+.infoGrid{
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.infoCard{
+    background: rgba(255,255,255,0.08);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.infoCard:hover{
+    background: rgba(255,255,255,0.14);
+
+    transform: translateY(-5px);
+}
+
+.infoCard h3{
+    margin-bottom: 10px;
+
+    color: #38BDF8;
+}
+
+.infoCard p{
+    color: #E2E8F0;
+}
+
+/* BOOKINGS */
+
+.bookingsSection{
+    margin-top: 50px;
+}
+
+.bookingCard{
+    background: rgba(255,255,255,0.08);
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    margin-bottom: 20px;
+
+    transition: 0.3s;
+}
+
+.bookingCard:hover{
+    background: rgba(255,255,255,0.14);
+
+    transform: translateY(-5px);
+}
+
+.bookingCard h2{
+    margin-bottom: 10px;
+
+    color: #38BDF8;
+}
+
+.bookingCard p{
+    margin-bottom: 5px;
+}
+
+/* BACK BUTTON */
+
+#backBtn{
+    width: 100%;
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    padding: 16px;
+
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    background: rgba(255,255,255,0.1);
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+#backBtn:hover{
+    background: white;
+    color: black;
+
+    transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 1100px){
+
+    .accountContainer{
+        flex-direction: column;
+    }
+
+    .sidebar,
+    .mainContent{
+        width: 100%;
+    }
+
+}
+
+@media(max-width: 700px){
+
+    .infoGrid{
+        grid-template-columns: 1fr;
+    }
+
+    .mainContent h1{
+        font-size: 35px;
+    }
+
+    #username{
+        font-size: 30px;
+    }
+
+}
